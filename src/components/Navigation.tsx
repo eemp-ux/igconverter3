@@ -74,7 +74,7 @@ export const Navigation: React.FC = () => {
                 }`}
               >
                 <BookOpen className="w-4 h-4" />
-                <span className="font-medium text-sm">V1 - Infographics</span>
+                <span className="font-medium text-sm">Knowledge Center</span>
               </Link>
 
               <Link
