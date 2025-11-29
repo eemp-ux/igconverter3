@@ -1,7 +1,9 @@
-import React from 'react';
-import { MessageSquare, Mail, Lightbulb, Bug, Sparkles, Coffee } from 'lucide-react';
+import React, { useState } from 'react';
+import { MessageSquare, Mail, Lightbulb, Bug, Sparkles, Coffee, QrCode } from 'lucide-react';
 
 export const FeedbackPage: React.FC = () => {
+  const [showQR, setShowQR] = useState(false);
+
   const emailCategories = [
     {
       icon: MessageSquare,
@@ -90,18 +92,39 @@ export const FeedbackPage: React.FC = () => {
             <Coffee className="w-6 h-6 text-amber-300" />
             <h3 className="text-white font-semibold text-lg">Support This Tool</h3>
           </div>
-          <p className="text-white/80 text-sm text-center leading-relaxed">
-            If you find this tool useful, you can{' '}
-            <a 
-              href="https://buymeacoffee.com/your_username" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="text-amber-300 hover:text-amber-200 font-semibold transition-colors underline decoration-amber-300/50 hover:decoration-amber-200"
-            >
-              buy me a coffee
-            </a>
-            {' '}to support its development and maintenance.
+          <p className="text-white/80 text-sm text-center leading-relaxed mb-4">
+            If you find this tool useful, you can buy me a coffee to support its development and maintenance.
           </p>
+          <div className="text-center">
+            <p className="text-white/70 text-xs mb-3">TNG eWallet</p>
+            {!showQR ? (
+              <button
+                onClick={() => setShowQR(true)}
+                className="glass rounded-lg px-6 py-3 hover:bg-white/20 transition-all group inline-flex items-center gap-2"
+              >
+                <QrCode className="w-5 h-5 text-amber-300 group-hover:text-amber-200 transition-colors" />
+                <span className="text-white font-semibold group-hover:text-white/90 transition-colors">
+                  Show QR Code
+                </span>
+              </button>
+            ) : (
+              <div className="inline-block">
+                <div className="glass rounded-lg p-4 mb-3">
+                  <img 
+                    src="https://cdn.chatandbuild.com/users/69058807540a6cb4cfcdcacb/qr-code1-1764421346752-13795097-1764421346751-307301698.jpg"
+                    alt="TNG QR Code"
+                    className="w-48 h-48 mx-auto rounded-lg"
+                  />
+                </div>
+                <button
+                  onClick={() => setShowQR(false)}
+                  className="text-white/60 hover:text-white/80 text-xs transition-colors"
+                >
+                  Hide QR Code
+                </button>
+              </div>
+            )}
+          </div>
         </div>
 
         <div className="glass rounded-xl p-4">
