@@ -10,7 +10,7 @@ export const IdealGasLaw: React.FC = () => {
         onClick={() => setIsExpanded(!isExpanded)}
         className="w-full flex items-center justify-between mb-3 hover:bg-white/5 rounded-lg p-2 -m-2 transition-all"
       >
-        <h3 className="text-white font-semibold text-lg">Understanding the Ideal Gas Law</h3>
+        <h3 className="text-white font-semibold text-base">Understanding the Ideal Gas Law</h3>
         {isExpanded ? (
           <ChevronUp className="w-5 h-5 text-white/70" />
         ) : (
@@ -104,7 +104,7 @@ export const IdealGasLaw: React.FC = () => {
         </div>
 
         <div className="glass-card rounded-lg p-3 mb-3">
-          <h3 className="text-lg font-semibold text-white mb-2">Gas Constant (R)</h3>
+          <h3 className="text-base font-semibold text-white mb-2">Gas Constant (R)</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
             <div className="glass rounded-lg p-3">
               <div className="text-white/60 text-xs mb-1">Universal Gas Constant</div>
@@ -118,7 +118,7 @@ export const IdealGasLaw: React.FC = () => {
         </div>
 
         <div className="glass-card rounded-lg p-3">
-          <h3 className="text-lg font-semibold text-white mb-2">Key Relationships</h3>
+          <h3 className="text-base font-semibold text-white mb-2">Key Relationships</h3>
           <div className="space-y-2">
             <div className="glass rounded-lg p-3">
               <div className="flex items-center justify-between mb-1">

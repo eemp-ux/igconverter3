@@ -15,7 +15,7 @@ export const ConversionInfographic: React.FC = () => {
         >
           <div className="flex items-center gap-2">
             <Calculator className="w-5 h-5 text-purple-300" />
-            <h3 className="text-lg font-semibold text-white">Conversion Formulas</h3>
+            <h3 className="text-base font-semibold text-white">Conversion Formulas</h3>
           </div>
           {isFormulasOpen ? (
             <ChevronUp className="w-5 h-5 text-white/70" />
@@ -111,7 +111,7 @@ export const ConversionInfographic: React.FC = () => {
         >
           <div className="flex items-center gap-2">
             <ArrowRight className="w-5 h-5 text-green-300" />
-            <h3 className="text-lg font-semibold text-white">
+            <h3 className="text-base font-semibold text-white">
               Worked Example: Converting 100 Nm³ of Nitrogen to Sm³
             </h3>
           </div>
